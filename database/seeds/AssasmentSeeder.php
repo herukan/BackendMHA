@@ -70,6 +70,21 @@ class AssasmentSeeder extends Seeder
             'Diterima',
         ];
 
+        $nik = [
+            '5203131401960001',
+            '5203131401960002',
+            '5203131401960033',
+            '5203131401960005',
+            '5203131401960061',
+            '5203131401960091',
+            '5203131401961001',
+            '5203131401961201',
+            '5203131401963101',
+            '5203131401969801',
+            '5203131401960011',
+            '5203131401960012',
+        ];
+
         $latitude = [
             '-8.578376',
             '-8.401439',
@@ -306,6 +321,7 @@ class AssasmentSeeder extends Seeder
         for ($i = 0; $i < 179; $i++) {
 
             Asassment::create([
+                'nik' => $nik[rand(0, count($nik) - 1)],
                 'kab' => $kab[rand(0, count($kab) - 1)],
                 'kec' => $kec[rand(0, count($kec) - 1)],
                 'alamat' => $faker->address,

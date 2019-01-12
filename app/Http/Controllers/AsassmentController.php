@@ -49,6 +49,7 @@ class AsassmentController extends Controller
                             ->orWhere('kewenangan', 'LIKE',"%{$id}%")
                             ->orWhere('tingkat', 'LIKE',"%{$id}%")
                             ->orWhere('status', 'LIKE',"%{$id}%")
+                            ->orWhere('nik', 'LIKE',"%{$id}%")
                             ->get();
 
             // $authorModel = Asassment::where($column , '=', $id)->get();
@@ -422,6 +423,7 @@ return $statuskab;
 
         //   $pathcompact =compact('path');
 
+        $nik = $request->get('nik');
         $kab = $request->get('kab');
         $kec = $request->get('kec');
         $alamat = $request->get('alamat');
@@ -624,6 +626,7 @@ $kerusakan =   ($b_pondasil + $b_pondasim + $b_pondasih +
         }       
 
         $Asassment = new Asassment;
+        $Asassment->nik = $nik;
         $Asassment->kab = $kab;
         $Asassment->kec =$kec;
         $Asassment->alamat =$alamat;
@@ -660,7 +663,7 @@ $kerusakan =   ($b_pondasil + $b_pondasim + $b_pondasih +
         $Asassment->status ='Pending';
         $Asassment->save();
 
-        $data = array('id' => $Asassment->id,'kab' => $kab, 'kec' => $kec
+        $data = array('id' => $Asassment->id,'nik' => $nik,'kab' => $kab, 'kec' => $kec
         , 'alamat' => $alamat, 'long' => $long, 'lot' => $lot, 'nama' => $nama
         , 'sektor' => $sektor, 'kewenangan' => $kewenangan, 'luas' => $luas, 'harga' => $harga
         , 'pondasi_l' => $pondasi_l, 'pondasi_m' => $pondasi_m, 'pondasi_h' => $pondasi_h ,'pondasi_t' => $pondasi_t, 'kolom_l' => $kolom_l
@@ -688,6 +691,7 @@ $kerusakan =   ($b_pondasil + $b_pondasim + $b_pondasih +
         $fdinding = $request->get('fdinding');
         $flantai = $request->get('flantai');
         
+        $nik = $request->get('nik');
       $kab = $request->get('kab');
       $kec = $request->get('kec');
       $alamat = $request->get('alamat');
@@ -718,6 +722,7 @@ $kerusakan =   ($b_pondasil + $b_pondasim + $b_pondasih +
       $status = $request->get('status');
        
         $Asassment = Asassment::find($id);
+        $Asassment->nik = $nik;
         $Asassment->kab = $kab;
         $Asassment->kec =$kec;
         $Asassment->alamat =$alamat;
@@ -754,7 +759,7 @@ $kerusakan =   ($b_pondasil + $b_pondasim + $b_pondasih +
         $Asassment->status = $status;
         $Asassment->save();
         
-        $data = array('id' => $Asassment->id,'kab' => $kab, 'kec' => $kec
+        $data = array('id' => $Asassment->id,'nik' => $nik,'kab' => $kab, 'kec' => $kec
         , 'alamat' => $alamat, 'long' => $long, 'lot' => $lot, 'nama' => $nama
         , 'sektor' => $sektor, 'kewenangan' => $kewenangan, 'luas' => $luas, 'harga' => $harga
         , 'pondasi_l' => $pondasi_l, 'pondasi_m' => $pondasi_m, 'pondasi_h' => $pondasi_h ,'pondasi_t' => $pondasi_t, 'kolom_l' => $kolom_l
