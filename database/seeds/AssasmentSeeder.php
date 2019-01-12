@@ -292,6 +292,12 @@ class AssasmentSeeder extends Seeder
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3gy9pzXIccOcHmV_-am_PdfhWpWEwMnQojPBwCrZ87wSqwziW',
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd1-4oCMQqMJirwwCUzge7QUHwkI77_UdsETGnhyC3eaJVeUpe',
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmrpELuNmR5PB_te2-aA_A3ajvSr0yE5OADy5FfJ6ucCEfSvhH4w',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbSAP82sFxzHGSFmPMT0214o02KEYpkv8vgl7Wp1kXefaH6u-9',
+            'https://i.pinimg.com/originals/7a/92/81/7a9281e4da2fff0dba714bca366cc4ac.jpg',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXYg-DxN0MCEDaGpVuzhjJfLZ-V7FgZZ-OODX8_ospftnP5ZRQ',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ0F2Wab9Zk_RbQZKkEXTi1oLptooEKFbvEEPVGJzj_Bh0O6m8',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ49Z0Cv53xi3WvLkCOe3hXAGMRNj1mxjiEG4YI3EewKs5wRlmK',
+            'http://uiowaacrc.org/wp-content/uploads/2018/04/how-to-fix-a-crack-in-the-wall-fixing-cracks-plaster-walls-old-house-brick.jpg',
         ];
         
         
