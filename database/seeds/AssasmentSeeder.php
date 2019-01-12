@@ -70,6 +70,13 @@ class AssasmentSeeder extends Seeder
             'Diterima',
         ];
 
+        $kondisi = [
+            'Rumah susah untuk di akses dikarnakan jembatan satu satunya penghubung terputus',
+            'Kondisi sekitar kondusif pasca bantuan gelombang pertama',
+            'Kondisi mencekam karna belum adanya satupun bantuan',
+        ];
+
+
         $nik = [
             '5203131401960001',
             '5203131401960002',
@@ -332,6 +339,7 @@ class AssasmentSeeder extends Seeder
                 'kewenangan' => $kewenangan[rand(0, count($kewenangan) - 1)],
                 'luas' => $faker->areaCode,
                 'harga' => $faker->areaCode,
+                'kondisi' => $kondisi[rand(0, count($kondisi) - 1)],
                 'pondasi_l' => $jumlah[rand(0, count($jumlah) - 1)],
                 'pondasi_m' => $jumlah[rand(0, count($jumlah) - 1)],
                 'pondasi_h' => $jumlah[rand(0, count($jumlah) - 1)],

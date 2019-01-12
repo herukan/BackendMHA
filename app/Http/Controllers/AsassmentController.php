@@ -434,6 +434,7 @@ return $statuskab;
         $kewenangan = $request->get('kewenangan');
         $luas = $request->get('luas');
         $harga = $request->get('harga');
+        $kondisi = $request->get('kondisi');
         $pondasi_l = $request->get('pondasi_l');
         $pondasi_m = $request->get('pondasi_m');
         $pondasi_h = $request->get('pondasi_h');
@@ -637,6 +638,7 @@ $kerusakan =   ($b_pondasil + $b_pondasim + $b_pondasih +
         $Asassment->kewenangan =$kewenangan ;
         $Asassment->luas =$luas ;
         $Asassment->harga =$harga ;
+        $Asassment->kondisi =$kondisi ;
         $Asassment->pondasi_l =$pondasi_l;
         $Asassment->pondasi_m =$pondasi_m ;
         $Asassment->pondasi_h =$pondasi_h ;
@@ -665,7 +667,7 @@ $kerusakan =   ($b_pondasil + $b_pondasim + $b_pondasih +
 
         $data = array('id' => $Asassment->id,'nik' => $nik,'kab' => $kab, 'kec' => $kec
         , 'alamat' => $alamat, 'long' => $long, 'lot' => $lot, 'nama' => $nama
-        , 'sektor' => $sektor, 'kewenangan' => $kewenangan, 'luas' => $luas, 'harga' => $harga
+        , 'sektor' => $sektor, 'kewenangan' => $kewenangan, 'luas' => $luas, 'harga' => $harga,'kondisi' => $kondisi
         , 'pondasi_l' => $pondasi_l, 'pondasi_m' => $pondasi_m, 'pondasi_h' => $pondasi_h ,'pondasi_t' => $pondasi_t, 'kolom_l' => $kolom_l
         , 'kolom_m' => $kolom_m, 'kolom_h' => $kolom_h, 'kolom_t' => $kolom_t, 'atap_t' => $atap_t
         , 'langit_l' => $langit_l, 'langit_m' => $langit_m, 'dinding_m' => $dinding_m, 'dinding_h' => $dinding_h
@@ -702,6 +704,7 @@ $kerusakan =   ($b_pondasil + $b_pondasim + $b_pondasih +
       $kewenangan = $request->get('kewenangan');
       $luas = $request->get('luas');
       $harga = $request->get('harga');
+      $kondisi = $request->get('kondisi');
       $pondasi_l = $request->get('pondasi_l');
       $pondasi_m = $request->get('pondasi_m');
       $pondasi_h = $request->get('pondasi_h');
@@ -733,6 +736,7 @@ $kerusakan =   ($b_pondasil + $b_pondasim + $b_pondasih +
         $Asassment->kewenangan =$kewenangan ;
         $Asassment->luas =$luas ;
         $Asassment->harga =$harga ;
+        $Asassment->kondisi =$kondisi ;
         $Asassment->pondasi_l =$pondasi_l;
         $Asassment->pondasi_m =$pondasi_m ;
         $Asassment->pondasi_h =$pondasi_h ;
@@ -761,16 +765,13 @@ $kerusakan =   ($b_pondasil + $b_pondasim + $b_pondasih +
         
         $data = array('id' => $Asassment->id,'nik' => $nik,'kab' => $kab, 'kec' => $kec
         , 'alamat' => $alamat, 'long' => $long, 'lot' => $lot, 'nama' => $nama
-        , 'sektor' => $sektor, 'kewenangan' => $kewenangan, 'luas' => $luas, 'harga' => $harga
+        , 'sektor' => $sektor, 'kewenangan' => $kewenangan, 'luas' => $luas, 'harga' => $harga,'kondisi' => $kondisi
         , 'pondasi_l' => $pondasi_l, 'pondasi_m' => $pondasi_m, 'pondasi_h' => $pondasi_h ,'pondasi_t' => $pondasi_t, 'kolom_l' => $kolom_l
         , 'kolom_m' => $kolom_m, 'kolom_h' => $kolom_h, 'kolom_t' => $kolom_t, 'atap_t' => $atap_t
         , 'langit_l' => $langit_l, 'langit_m' => $langit_m, 'dinding_m' => $dinding_m, 'dinding_h' => $dinding_h
         , 'dinding_t' => $dinding_t, 'lantai_l' => $lantai_l, 'lantai_t' => $lantai_t , 'tingkat' => $tingkat,'status' => $status
      );
         return response()->json($data);
-
-        // return "Data Berhasil di Update";
-
     }
 
     public function delete($id){

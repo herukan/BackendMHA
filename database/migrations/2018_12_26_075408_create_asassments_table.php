@@ -27,6 +27,7 @@ class CreateAsassmentsTable extends Migration
             $table->String('kewenangan')->nullable();
             $table->Integer('luas')->nullable();
             $table->Integer('harga')->nullable();
+            $table->String('kondisi',500)->nullable();
 
             $table->String('pondasi_l')->nullable();
             $table->String('pondasi_m')->nullable();
