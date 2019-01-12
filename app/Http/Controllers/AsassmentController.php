@@ -48,6 +48,7 @@ class AsassmentController extends Controller
                             ->orWhere('sektor', 'LIKE',"%{$id}%")
                             ->orWhere('kewenangan', 'LIKE',"%{$id}%")
                             ->orWhere('tingkat', 'LIKE',"%{$id}%")
+                            ->orWhere('status', 'LIKE',"%{$id}%")
                             ->get();
 
             // $authorModel = Asassment::where($column , '=', $id)->get();
