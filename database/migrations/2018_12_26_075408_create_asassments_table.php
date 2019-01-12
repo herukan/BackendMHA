@@ -16,7 +16,7 @@ class CreateAsassmentsTable extends Migration
         Schema::create('asassments', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->Integer('nik',300)->nullable();
+            $table->bigInteger('nik')->nullable();
             $table->String('kab')->nullable();
             $table->String('kec')->nullable();
             $table->String('alamat')->nullable();
